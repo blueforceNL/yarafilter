@@ -46,7 +46,7 @@ Filter out all rules with "Linux" in the description (case insensitive):
 # Excluding rules
 
 At some point during your investigation, you'll encounter false positives. 
-Move the rules causing the false to a separate directory and re-run yarafilter with:
+Move the rules causing the false positive to a separate directory and re-run yarafilter with:
 
     python3 yarafilter.py -e exclude_directory -p directory_with_yar_files
 
