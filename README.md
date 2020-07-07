@@ -1,5 +1,5 @@
 # yarafilter
-Filter and deduplicate your yar file collection
+Filter and deduplicate your .yar file collection.
 
 # Installation:
 
