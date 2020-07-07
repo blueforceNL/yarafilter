@@ -23,9 +23,9 @@ You should of course have well maintained sets of rules for specific types of in
 This tool is written for those of you that don't.
 
 You just throw all your .yar files in a directory and fire up yarafilter. 
-Yarafilter will remove functionally duplicate rules and rename duplicate identifiers (yes, the ones Loki complains about).
+Yarafilter will remove functionally duplicate rules and rename duplicate identifiers (yes, the ones [Loki](https://github.com/Neo23x0/Loki) complains about).
 
-The results is a clean ruleset in the directory ./output that you can use for your incident. 
+The result is a clean ruleset in the directory ./output that you can use for your incident. 
 Pro tip: Don't throw away your original files, the filtering can result in losing comments in the .yar files.
 
 
