@@ -1,19 +1,20 @@
 # yarafilter
 Filter and deduplicate your yar file collection
 
-#Installation:
+# Installation:
 
     git clone https://github.com/blueforceNL/yarafilter
-    python setup.py install
+    cd yarafilter
+    sudo python3 setup.py install
 
 Usage:
 
-    python yarafilter.py -p directory_with_yar_files
+    python3 yarafilter.py -p directory_with_yar_files
     
     
-*Assuming your .yar files are in a directory named "directory_with_yar_files"
+This is assuming your .yar files are in a directory named "directory_with_yar_files"
    
-#What's it for?
+# What's it for?
     
 Like other Incident Response teams, ours has quite the collection of YARA rules. 
 And, like at other IR teams, over time the collection morphs into a big mess of overlapping and duplicate rules.
@@ -28,26 +29,26 @@ The results is a clean ruleset in the directory ./output that you can use for yo
 Pro tip: Don't throw away your original files, the filtering can result in losing comments in the .yar files.
 
 
-#Advanced filtering
+# Advanced filtering
    
 Filter out all rules depending on Androguard:
   
-    python yarafilter.py -p directory_with_yar_files -i androguard
+    python3 yarafilter.py -p directory_with_yar_files -i androguard
     
 Filter out all rules authored by John Doe (case insensitive):
   
-    python yarafilter.py -p directory_with_yar_files -a "john doe"
+    python3 yarafilter.py -p directory_with_yar_files -a "john doe"
 
 Filter out all rules with "Linux" in the description (case insensitive):
   
-    python yarafilter.py -p directory_with_yar_files -d "Linux"
+    python3 yarafilter.py -p directory_with_yar_files -d "Linux"
     
-#Excluding rules
+# Excluding rules
 
 At some point during your investigation, you'll encounter false positives. 
 Move the rules causing the false to a separate directory and re-run yarafilter with:
 
-    python yarafilter.py -e exclude_directory -p directory_with_yar_files
+    python3 yarafilter.py -e exclude_directory -p directory_with_yar_files
 
 If your offending rule is in a .yar file with many other rules, remove that one rule from the file and put it in a .yar file of its own in the exclude directory. 
 
